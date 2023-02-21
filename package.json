@@ -1,0 +1,31 @@
+{
+  "name": "interview-test",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "sequelizeauto": "sequelize-auto -c config/db.config.js",
+    "migration:make": "knex migrate:make",
+    "migration:apply": "knex migrate:latest",
+    "migration:rollback": "knex migrate:rollback"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
+    "express": "~4.16.1",
+    "express-jwt": "^8.4.1",
+    "express-validator": "^6.15.0",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "knex": "^2.4.2",
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
