@@ -1,11 +1,12 @@
+require("dotenv").config({ path: "./.env" });
 const knex = require("knex")({
-  client: "mysql",
+  client: process.env.DIA_DB,
   connection: {
-    host: "127.0.0.1",
-    user: "root",
-    post: 3306,
-    password: "admin123",
-    database: "testinterview",
+    post: process.env.PORT_DB,
+    host: process.env.HOST_DB,
+    user: process.env.USER_DB,
+    password: process.env.PWD_DB,
+    database: process.env.NAME_DB,
   },
   pool: { min: 0, max: 7 },
 });
